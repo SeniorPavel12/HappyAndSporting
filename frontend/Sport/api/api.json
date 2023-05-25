@@ -1,0 +1,456 @@
+[
+-----------------------------------------------------------------------------
+Workout
+-----------------------------------------------------------------------------,
+    {
+    "description": "Возвращает самые базовые данные о всех тренировках пользователях",
+    "url": "/workout/workout/get_all",
+    "response": {
+        "workout": [
+            {
+                "id": "uuid",
+                "name": "name",
+                "icon": "path_icon",
+                "color": "color"
+            }
+        ]
+    },
+    "request": {
+    }
+},
+
+
+{
+    "description": "Возвращает данные о тренировке по id",
+    "url": "/workout/workout/get",
+    "response": {
+        "id": "id",
+        "name": "name",
+        "color": "color",
+        "icon": "path_icon",
+        "initial_break": "initial_break",
+        "playlist": "playlist_id"
+    },
+    "request": {
+        "id": "id"
+    }
+},
+
+
+{
+    "description": "Создаёт объект по получаемым данным",
+    "url": "/workout/workout/create",
+    "response": {
+        "id": "id"
+    },
+    "request": {
+        "name": "name",
+        "color": "color",
+        "icon": "path_icon",
+        "initial_break": "initial_break", // default = 10
+        "playlist": "playlist_id" // optionally
+    }
+},
+
+
+{
+    "description": "Обновляет объект по получаемым данным(при записи в плейлист все старые записи удаляются)",
+    "url": "/workout/workout/update",
+    "response": {
+        "id": "id",
+        "name": "name",
+        "color": "color",
+        "icon": "path_icon",
+        "initial_break": "initial_break",
+        "playlist": "playlist_id"
+    },
+    "request": {
+        "name": "name",
+        "color": "color",
+        "icon": "path_icon",
+        "initial_break": "initial_break",
+        "playlist": "playlist_id"
+    }
+},
+
+
+{
+    "description": "Удаляет все объекты по id",
+    "url": "/workout/workout/delete",
+    "response": {
+        "id": ["id", "id", "id..."]
+    },
+    "request": {
+        "id": ["id", "id", "id..."]
+    }
+},
+
+
+{
+    "description": "Возвращает занятые цвета",
+    "url": "/workout/workout/get_not_free_workout_color",
+    "response": {
+        "color": ["color", "color", "color..."]
+    },
+    "request": {
+    }
+},
+
+
+-----------------------------------------------------------------------------
+Exercise
+-----------------------------------------------------------------------------
+
+
+{
+    "description": "Возвращает самые базовые данные о всех упражнениях тренировки",
+    "url": "/workout/exercise/get_all",
+    "response": {
+        "exercise": [
+            {
+                "id": "uuid",
+                "name": "name",
+                "icon": "path_icon",
+                "type": "type",
+                "number": "number"
+            }
+        ]
+    },
+    "request": {
+        "id": "workout_id"
+    }
+},
+
+
+{
+    "description": "Возвращает данные о упражнения по id",
+    "url": "/workout/exercise/get",
+    "response": {
+        "id": "uuid",
+        "name": "name",
+        "icon": "path_icon",
+        "type": "type",
+        "number": "number",
+        "break_between_approaches": "break_between_approaches",
+        "break_after_exercise": "break_after_exercise", // = break_between_approaches
+        "workout": "workout"
+    },
+    "request": {
+        "id": "id"
+    }
+},
+
+
+{
+    "description": "Создаёт объект по получаемым данным",
+    "url": "/workout/exercise/create",
+    "response": {
+        "id": "id"
+    },
+    "request": {
+        "name": "name",
+        "icon": "path_icon",
+        "type": "type",
+        "number": "number",
+        "break_between_approaches": "break_between_approaches",
+        "break_after_exercise": "break_after_exercise",
+        "workout": "workout"
+    }
+},
+
+
+{
+    "description": "Обновляет объект по получаемым данным",
+    "url": "/workout/exercise/update",
+    "response": {
+        "id": "uuid",
+        "name": "name",
+        "icon": "path_icon",
+        "type": "type",
+        "number": "number",
+        "break_between_approaches": "break_between_approaches",
+        "break_after_exercise": "break_after_exercise",
+        "workout": "workout"
+    },
+    "request": {
+        "id": "id",
+        "name": "name",
+        "icon": "path_icon",
+        "type": "type",
+        "break_between_approaches": "break_between_approaches",
+        "break_after_exercise": "break_after_exercise"
+    }
+},
+
+
+{
+    "description": "Удаляет все объекты по id",
+    "url": "/workout/exercise/delete",
+    "response": {
+        "id": ["id", "id", "id..."]
+    },
+    "request": {
+        "id": ["id", "id", "id..."]
+    }
+},
+
+
+
+
+-----------------------------------------------------------------------------
+Approach
+-----------------------------------------------------------------------------,
+
+
+
+
+{
+    "description": "Возвращает самые базовые данные о всех подходах упражнения",
+    "url": "/workout/approach/get_all",
+    "response": {
+        "approach": [
+            {
+                "id": "uuid",
+                "working_weight": "working_weight",
+                "repetitions": "repetitions",
+                "duration": "duration",
+                "number": "number"
+            }
+        ]
+    },
+    "request": {
+        "id": "exercise_id"
+    }
+},
+
+
+{
+    "description": "Возвращает данные о подхода по id",
+    "url": "/workout/approach/get",
+    "response": {
+        "id": "uuid",
+        "working_weight": "working_weight",
+        "repetitions": "repetitions",
+        "duration": "duration",
+        "number": "number",
+        "exercise": "exercise"
+    },
+    "request": {
+        "id": "id"
+    }
+},
+
+
+{
+    "description": "Создаёт объект по получаемым данным",
+    "url": "/workout/approach/create",
+    "response": {
+        "id": "id"
+    },
+    "request": {
+        "working_weight": "working_weight",
+        "repetitions": "repetitions",
+        "duration": "duration",
+        "number": "number",
+        "exercise": "exercise"
+    }
+},
+
+
+{
+    "description": "Обновляет объект по получаемым данным",
+    "url": "/workout/approach/update",
+    "response": {
+        "id": "id",
+        "working_weight": "working_weight",
+        "repetitions": "repetitions",
+        "duration": "duration",
+        "number": "number",
+        "exercise": "exercise"
+    },
+    "request": {
+        "working_weight": "working_weight",
+        "repetitions": "repetitions",
+        "duration": "duration",
+        "number": "number",
+    }
+},
+
+
+{
+    "description": "Удаляет все объекты по id",
+    "url": "/workout/approach/delete",
+    "response": {
+        "id": ["id", "id", "id..."]
+    },
+    "request": {
+        "id": ["id", "id", "id..."]
+    }
+},
+
+
+-----------------------------------------------------------------------------
+Music
+-----------------------------------------------------------------------------,
+
+
+
+{
+    "description": "Возвращает самые базовые данные о всей музыке",
+    "url": "/music/music/get_all",
+    "response": {
+        "approach": [
+            {
+                "id": "uuid",
+                "title": "title",
+                "playlist": "playlist"
+            }
+        ]
+    },
+    "request": {
+    }
+},
+
+
+{
+    "description": "Возвращает данные о музыке по id",
+    "url": "/music/music/get",
+    "response": {
+        "id": "uuid",
+        "title": "title",
+        "content": "content",
+        "playlist": "playlist"
+    },
+    "request": {
+        "id": "id"
+    }
+},
+
+
+{
+    "description": "Создаёт объект по получаемым данным",
+    "url": "/music/music/create",
+    "response": {
+        "id": "id"
+    },
+    "request": {
+        "title": "title",
+        "content": "content",
+        "playlist": "playlist"
+    }
+},
+
+
+{
+    "description": "Обновляет объект по получаемым данным",
+    "url": "/music/music/update",
+    "response": {
+        "id": "id",
+        "title": "title",
+        "content": "content",
+        "playlist": "playlist"
+    },
+    "request": {
+        "title": "title",
+        "playlist": "playlist"
+    }
+},
+
+
+{
+    "description": "Удаляет все объекты по id",
+    "url": "/music/music/delete",
+    "response": {
+        "id": ["id", "id", "id..."]
+    },
+    "request": {
+        "id": ["id", "id", "id..."]
+    }
+},
+
+
+
+-----------------------------------------------------------------------------
+Playlist
+-----------------------------------------------------------------------------,
+
+
+
+{
+    "description": "Возвращает самые базовые данные о всех плейлистах",
+    "url": "/music/playlist/get_all",
+    "response": {
+        "approach": [
+            {
+                "id": "uuid",
+                "title": "title"
+            }
+        ]
+    },
+    "request": {
+    }
+},
+
+
+{
+    "description": "Возвращает данные о музыке по id",
+    "url": "/music/playlist/get",
+    "response": {
+        "id": "uuid",
+        "title": "title"
+    },
+    "request": {
+        "id": "id"
+    }
+},
+
+
+{
+    "description": "Создаёт объект по получаемым данным",
+    "url": "/music/playlist/create",
+    "response": {
+        "id": "id"
+    },
+    "request": {
+        "title": "title"
+    }
+},
+
+
+{
+    "description": "Обновляет объект по получаемым данным",
+    "url": "/music/playlist/update",
+    "response": {
+        "id": "uuid",
+        "title": "title"
+    },
+    "request": {
+        "title": "title"
+    }
+},
+
+
+{
+    "description": "Удаляет все объекты по id",
+    "url": "/music/playlist/delete",
+    "response": {
+        "id": ["id", "id", "id..."]
+    },
+    "request": {
+        "id": ["id", "id", "id..."]
+    }
+},
+
+
+{
+    "description": "Добавляет в плейлист переданные music",
+    "url": "/music/playlist/add_many_music_to_playlist",
+    "response": {
+        "music": ["id", "id", "id..."]
+    },
+    "request": {
+        "playlist": "id",
+        "music": ["id", "id", "id..."]
+    }
+}
+]

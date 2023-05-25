@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 5px 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .back {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+
+    div {
+      font-size: 20px;
+    }
+  }
+
+  .titlePage {
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 20%;
+    padding-top: 5px;
+  }
+}
+
+.type {
+  font-size: 16px;
+  font-weight: 400;
+  border-top: 1px solid #e9dcdc;
+  border-bottom: 1px solid #e9dcdc;
+  margin-top: 20px;
+  padding: 10px 10px;
+}
+
+.description {
+  padding: 10px 10px 30px 10px;
+  color: gray;
+}

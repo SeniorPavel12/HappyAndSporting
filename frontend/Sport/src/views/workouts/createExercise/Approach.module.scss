@@ -1,0 +1,57 @@
+.approach {
+  border: 1px solid #e9dcdc;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.headApproach {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9dcdc;
+  padding: 10px 15px;
+
+  h3 {
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
+
+.bodyApproach {
+  padding: 10px;
+
+  .parameter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .title {
+    display: flex;
+    color: gray;
+
+    .text {
+      margin-left: 10px;
+    }
+  }
+
+  .tuning {
+    display: flex;
+    justify-content: space-between;
+    width: 27%;
+    align-items: center;
+    border: 1px solid #e9dcdc;
+    border-radius: 15px;
+
+    .minus, .plus {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

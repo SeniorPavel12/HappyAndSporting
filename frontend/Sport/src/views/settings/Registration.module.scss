@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height: 92vh;
+  padding: 5px 15px;
+}
+
+.form {
+  width: 100%;
+}
+
+.form * {
+  outline: none;
+}
+
+.formItem {
+  margin: 0 0 20px 0;
+}
+
+.formLabel {
+  font-size: 18px;
+  display: block;
+  margin: 0 0 10px 0;  
+}
+
+.formInput {
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.btn {
+  background-color: #d2d254;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 10px;
+}

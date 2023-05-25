@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  
+  .cancel {
+    font-size: 16px;
+  }
+
+  .ready {
+    font-size: 16px;
+    color: orange;
+  }
+}
+
+.finally_icon {
+  width: 60px;
+  height: 60px;
+  margin: 30px auto 0 auto;
+  color: orange;
+  
+  div {
+    font-size: 60px;
+  }
+}
+
+.title_page {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.diving_line {
+  border: 1px solid #e9dcdc;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.icons_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 8%;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #000;
+
+  div {
+    font-size: 40px;
+  }
+}

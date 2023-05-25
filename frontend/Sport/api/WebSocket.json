@@ -1,0 +1,71 @@
+{
+    "type": "SW",
+    "workout": "workout.id"
+},
+
+{
+    "type": "NT"
+},
+{
+    "type": "EW"
+},
+{
+    "type": "approach",
+    "data": {"repetitions": "repetitions", "working_weight": "working_weight"},//или duration
+    "other_data": {"count_exercise": "count_exercise", "image_exercise": "image_exercise", "name_exercise": "name_exercise"},#если это первый подход упражнения
+}
+{
+    "type": "break",
+    "data": {"time": "time"},
+    "other_data": {"count_all_approach": "count_all_approach"} //если первый перерыв тренировки
+}
+{
+    "type": "end",
+    "data": {"all_approach_completed": "True/False"},
+}
+{
+    "errors": {"Ты еблан"}
+}
+
+
+}
+SW
+[{
+    "type": "break",
+    "data": {"time": "time"},
+    "other_data": {"count_all_approach": "count_all_approach"} // если первый перерыв тренировки
+{
+    "type": "approach",
+    "data": {"repetitions": "repetitions", "working_weight": "working_weight"},//или duration
+    "other_data": {"count_exercise": "count_exercise", "image_exercise": "image_exercise", "name_exercise": "name_exercise"},//если это первый подход упражнения
+}]
+NT
+[{
+    "type": "break",
+    "data": {"time": "time"},
+}
+{
+    "type": "approach",
+    "data": {"repetitions": "repetitions", "working_weight": "working_weight"},//или duration
+    "other_data": {"count_exercise": "count_exercise", "image_exercise": "image_exercise", "name_exercise": "name_exercise"},//если это первый подход упражнения
+}]
+NT
+[{
+    "type": "break",
+    "data": {"time": "time"},
+}
+{
+    "type": "approach",
+    "data": {"repetitions": "repetitions", "working_weight": "working_weight"},#или duration
+    "other_data": {"count_exercise": "count_exercise", "image_exercise": "image_exercise", "name_exercise": "name_exercise"},#если это первый подход упражнения
+}]
+NT
+[{
+    "type": "break",
+    "data": {"time": "time"},
+}
+{
+    "type": "approach",
+    "data": {"repetitions": "repetitions", "working_weight": "working_weight"},#или duration
+    "other_data": {"count_exercise": "count_exercise", "image_exercise": "image_exercise", "name_exercise": "name_exercise"},#если это первый подход упражнения
+}]

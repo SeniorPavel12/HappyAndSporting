@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+  django:
+    image: pavel12pp/django:deploy
+    build:
+      context: ../backend/
+      dockerfile: Dockerfile.prod
+    command: daphne -b 0.0.0.0 HaSpo.asgi:application
+    volumes:
+      - static_volume:/home/app/web/static
+      - media_volume:/home/app/web/media
+    env_file:
+      - env/.env.prod
+    depends_on:
+      - postgres
+    restart: on-failure
+
+  postgres:
+    image: pavel12pp/postgres:13.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - env/.env.prod.db
+    restart: on-failure
+
+  nginx:
+    image: pavel12pp/nginx:deploy
+    build: ../frontend/
+    volumes:
+      - static_volume:/backend/static
+      - media_volume:/backend/media
+    ports:
+      - "1337:80"
+    depends_on:
+      - django
+
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:

@@ -1,0 +1,96 @@
+.form {
+  width: 100%;
+  margin-top: 40px;
+  background: #1a1919;
+  padding: 20px 20px 10px 20px;
+  border-radius: 15px;
+
+  select {
+    height: 35px;
+    background: #202124;
+    color: #9f9e9e;
+    border: none;
+    padding: 3px 5px;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.form * {
+  outline: none;
+}
+
+.titleForm {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 30px 0 20px 0;
+}
+
+.formItem {
+  margin: 0 0 20px 0;
+}
+
+.formLabel {
+  font-size: 19px;
+  display: block;
+  margin: 0 0 10px 0px;
+  color: gray;
+}
+
+.formInput {
+  width: 100%;
+  height: 50px;
+  background: #202124;
+  border: none;
+  color: gray;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.form__input:focus {
+  box-shadow: 0 0 15px #7a956b;
+}
+
+.fileItem {
+  position: relative;
+}
+
+.fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.fileButton {
+  display: inline-flex;
+  min-height: 40px;
+  border-radius: 10px;
+  align-items: center;
+  background-color: #a383ed;
+  padding: 0px 15px;  
+}
+
+.filePreview {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 10px 0px 0px 0px;
+}
+
+.formButton {
+  min-height: 40px;
+  border-radius: 10px;
+  background-color: #a383ed;
+  padding: 0px 30px;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,218 @@
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.miniContainer {
+  padding: 5px 10px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .back {
+    width: 20px;
+    height: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20%;
+  }
+}
+
+.title {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    color: orange;
+
+    div {
+      font-size: 40px;
+    }
+  }
+}
+
+.form * {
+  outline: none;
+}
+
+.form {
+
+  .formBody {
+    position: relative;
+    height: 40px;
+    width: 40px;
+  }
+
+  input {
+    height: 70%;
+    width: 340px;
+    border: none;
+    border-bottom: 1px solid #e9dcdc;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+  }
+
+  button {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border: none;
+    background: #fff;
+    left: 325px;
+    top: -5px;
+
+    div {
+      font-size: 23px;
+    }
+  }
+}
+
+.titleColor {
+  font-size: 17px;
+  font-weight: 300;
+  color: #898989;
+  margin-top: 20px;
+}
+
+.colors {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+
+  .circ_1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #264653;
+  }
+
+  .circ_1 .active {
+    border: 2px solid #219ebc;
+  }
+
+  .circ_2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2a9d8f;
+  }
+
+  .circ_3 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e9c46a;
+  }
+
+  .circ_4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f4a261;
+  }
+
+  .circ_5 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e76f51;
+  }
+
+  .circ_6 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #8ecae6;
+  }
+
+  .circ_7 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #219ebc;
+  }
+}
+
+.createExercises {
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    font-size: 17px;
+    font-weight: 300;
+    color: #898989;
+    margin-top: 20px;
+  }
+}
+
+.addExercise {
+  width: 65px;
+  height: 30px;
+  padding: 10px 20px 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  h4 {
+    color: orange;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .logo {
+    width: 22px;
+    height: 32px;
+    color: orange;
+    background-color: white;
+
+    div {
+      font-size: 22px;
+    }
+  }
+}
+
+.listExerxises {
+  height: 67vh;
+  margin-top: 10px;
+}
+
+.advice {
+  display: inline-block;
+  margin: 65% 28.5% 40% 28%;
+  color: gray;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 17px;
+  font-weight: 300;
+  color: #898989;
+}
+
+.btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_create {
+  width: 93%;
+  height: 40px;
+  background: #edb320;
+  border-radius: 20px;
+  border: none;
+}

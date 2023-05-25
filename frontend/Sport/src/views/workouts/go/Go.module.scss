@@ -1,0 +1,161 @@
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  background-color: #060517;
+  padding: 5px 15px;
+}
+
+.titlePage {
+  display: flex;
+  justify-content: space-between;
+
+  .titleWorkout {
+    color: #fff;
+  }
+
+  .finish {
+    color: gray;
+    font-weight: 600;
+  }
+}
+
+.progress {
+  height: 10px;
+  border-radius: 30px;
+  background-color: gray;
+  margin-top: 15px;
+  margin-bottom: 15px; 
+
+  &__line {
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    background: orange;    
+  }
+}
+
+.infoExercise {
+  padding: 5px 15px;
+  border-bottom: 1px solid #e9dcdc;
+  display: flex;
+  justify-content: space-between;
+
+  .countApproach {
+    font-size: 14px;
+    color: gray;
+  }
+}
+
+.timerContainer {
+  width: 220px;
+  height: 220px;
+  border: 7px solid #e9dcdc;
+  border-radius: 150px;
+  margin: 15vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+
+  .time {
+    font-size: 40px;
+    padding-top: 40px;
+  }
+
+  .info {
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+  }
+
+  div {
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.navButtons {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnSkip {
+  width: 49%;
+  background-color: #fef6f6;
+  color: gray;
+  border-radius: 10px;
+
+  .icon {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.btnComplete {
+  width: 49%;
+  background-color: orange;
+  color: #fff;
+  border-radius: 10px;
+
+  .icon {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.widgets {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget {
+  width: 49%;
+  border: 1px solid #e9dcdc;
+  border-radius: 10px;
+  text-align: center;
+
+  .parametr {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .text {
+    color: gray;
+  }
+}
+
+.footer {
+  padding: 5px 15px;
+
+  .parameter {
+    display: flex;
+    justify-content: space-between;
+  
+    .text {
+      color: gray;
+      display: flex;
+
+      .content {
+        padding-left: 10px;
+      }
+    }
+  }
+}

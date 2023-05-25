@@ -1,0 +1,26 @@
+@import url('./addition.scss');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.myContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.limition {
+  display: block;
+}
+
+@media (min-width: 426px) {
+  .myContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .limition {
+    display: none;
+  }
+}

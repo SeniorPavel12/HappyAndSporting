@@ -1,0 +1,67 @@
+.prev {
+  font-size: 20px;
+  color: gray;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #1a1919;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.titlePage {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0px 0 20px 0;
+}
+
+.song {
+  width: 100%;
+  background: #1a1919;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px 5px;
+
+  .info {
+    margin-left: 15px;
+  }
+
+  .autor {
+    color: #9f9e9e;
+  }
+
+  .title {
+    color: #fff;
+  }
+
+  .playlists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    select {
+      height: 25px;
+      background: #202124;
+      color: #9f9e9e;
+      border: none;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    div {
+      font-size: 24px;
+      margin: 0 10px 0 10px;
+      padding-top: 3px;
+      color: gray;
+    }
+  }
+}
+
+form * {
+  outline: none;
+}

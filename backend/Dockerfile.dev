@@ -1,0 +1,20 @@
+FROM python
+
+WORKDIR /backend
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+RUN apt-get update && apt-get install -y libmariadb-dev gcc python3-dev libcogl-pango-dev libcairo2-dev libtool linux-headers-amd64 musl-dev libffi-dev libssl-dev libjpeg-dev zlib1g-dev
+RUN apt-get install -yyq netcat
+RUN pip install --upgrade pip
+COPY HaSpo/requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY entrypoint.dev.sh .
+RUN sed -i 's/\r$//g' entrypoint.dev.sh
+RUN chmod +x entrypoint.dev.sh
+
+COPY HaSpo .
+
+ENTRYPOINT ["/backend/entrypoint.dev.sh"]
